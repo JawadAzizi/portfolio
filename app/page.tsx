@@ -1,7 +1,7 @@
 'use client'
 import { useState } from "react"
 import { Main } from "./libs/home"
-import { About } from "./libs/about"
+import { About } from "./libs/components/about"
 import { Contact } from "./libs/contact"
 import { Blog } from "./libs/blog"
 import { Portfolio } from "./libs/portfolio"
