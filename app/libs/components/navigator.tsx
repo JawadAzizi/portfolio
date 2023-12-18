@@ -14,15 +14,13 @@ export function NavigationButton({
   const [visible, setVisible] = useState(false);
   const linksButtons = links.map(link=>{
     return(
-        <button onClick={()=>{setPage(link); setVisible(false)}} className={" flex w-48 hover:text-sky-800 transition last:mb-3 "  + clsx(page ===link && 'text-sky-800')} key={link}>
-        <div className={clsx(link === page && 'border-e-2 border-sky-800 pe-[18px]')}>
+        <button onClick={()=>{setPage(link); setVisible(false)}} className={" flex w-48 hover:text-sky-800 transition last:mb-3 group "  + clsx(page ===link && 'text-sky-800')} key={link}>
             {link == 'home' && <HomeIcon className=" w-8" />}
             {link == 'about' && <UserIcon className=" w-8" />}
             {link == 'contact' && <ChatBubbleLeftIcon className=" w-8" />}
             {link == 'portfolio' && <ShoppingBagIcon className=" w-8" />}
             {link == 'blog' && <NewspaperIcon className=" w-8" />}
-        </div>
-            <div className="relative left-10">
+            <div className={"relative pl-6 group-hover:pl-10    ml-3.5" + clsx(link === page && " border-sky-800 border-l-2")}>
                 {capitalize(link)}
             </div>
         </button>
